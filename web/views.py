@@ -13,3 +13,7 @@ class MessageCreate(CreateView):
     model = Message
     fields = '__all__'
     success_url = reverse_lazy('mag_list')
+
+class MessageDelete(DeleteView):
+    model = Message
+    success_url = reverse_lazy('mag_list')
